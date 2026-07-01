@@ -1,0 +1,61 @@
+#include <stdio.h>
+
+int main()
+{
+//1)ARITHMETIC OPERATOR
+   int a = 5;
+   int b= 10;
+  /* printf("%d\n",a+b);
+   printf("%d\n",a-b);
+   printf("%d\n",a*b);
+   printf("%d\n",a/b);
+   
+//2)Pre increment 
+  printf("%d\n",++a);
+  printf("%d\n",a++);
+   printf("%d\n",a);
+   
+//3)Post increment   
+   
+   printf("%d\n",--b);
+   printf("%d\n",b--);
+   printf("%d\n",b);
+//4) speed calculation
+    int distance ,Time ,speed ;
+    printf("enter distance:");
+    scanf("%d\n",&distance);
+    printf("%d\n",Time);
+    scanf("%d\n",&Time);
+    speed=distance /Time;
+    printf("speed=%d\n");
+//5) remainder of two number
+   printf("%d\n",b%a);
+   
+//6)average of two numbers
+   
+   int avg= (a+b)/2;
+   printf("%d\n",avg);
+//11) Assignment operator  
+    int c=15;
+    int d=10;
+    c+=5;
+    printf("%d\n",c);
+    d-=3;
+    printf("%d\n",d);
+    c*=3;
+    printf("%d\n",c);
+    d/=3;
+    printf("%d\n",d);
+//13) square and cube value
+    int d=2,e=3,square,cube;
+    square=(2*2);
+    cube=(3*3);
+    printf("%d\n",square);
+    printf("%d\n",cube);*/
+//15)conditional statement 
+   int number_1, number_2;
+   printf("enter number_1:");
+   scanf("%d\n",&number_1);
+   printf("enter number_2:");
+   scanf("%d\n",&number_2);
+   printf(number_1< number_2?number_1:number_2 );
