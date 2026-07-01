@@ -5,7 +5,7 @@ int main()
 //1)ARITHMETIC OPERATOR
    int a = 5;
    int b= 10;
-  /* printf("%d\n",a+b);
+   printf("%d\n",a+b);
    printf("%d\n",a-b);
    printf("%d\n",a*b);
    printf("%d\n",a/b);
@@ -23,18 +23,80 @@ int main()
 //4) speed calculation
     int distance ,Time ,speed ;
     printf("enter distance:");
-    scanf("%d\n",&distance);
-    printf("%d\n",Time);
-    scanf("%d\n",&Time);
-    speed=distance /Time;
-    printf("speed=%d\n");
+    scanf("%d",&distance);
+    printf("enter Time:");
+    scanf("%d",&Time);
+    speed=(distance /Time);
+    printf("speed=%d\n",speed);
+ 
 //5) remainder of two number
    printf("%d\n",b%a);
    
 //6)average of two numbers
-   
    int avg= (a+b)/2;
    printf("%d\n",avg);
+   
+//7)area and perimeter
+//RECTANGLE AREA & PERIMETER
+   float length,bredth,area_rectangle,area_square,area_circle ,perimeter_rectangle,perimeter_square,perimeter_circle,side,radius ;
+   printf("length of the rectangle:");
+   scanf("%f",&length);
+   printf("bredth of the rectangle:");
+   scanf("%f",&bredth);
+   area_rectangle = length*bredth;
+   printf("the area of rectangle:%f\n",area_rectangle);
+   perimeter_rectangle =2*(area_rectangle);
+   printf("the perimeter of rectangle:%f\n",perimeter_rectangle);
+//square   
+   printf("the side in cm:");
+   scanf("%f",&side);
+   area_square=side*side;
+   printf("the arae :%f\n",area_square);
+   perimeter_square=(side)*4;
+   printf("the  perimeter:%f\n",perimeter_square);
+//AREA AND PERIMETER OF CIRCLE
+ 
+  printf("the radius:");
+  scanf("%f",&radius);
+  area_circle=3.14*(radius*radius);
+  printf("the area: %f\n",area_circle);
+  perimeter_circle =2*3.14*radius;
+  printf("the perimeter:%f\n",perimeter_circle);
+//8)CELCIUS TO FAHRENHEIT
+   float celsius,fahrenheit;
+   printf("enter celsius:");
+   scanf("%f",&celsius);
+   fahrenheit=(9/5*celsius)+32;
+   printf("the fahrenheit is:%f\n",fahrenheit);
+//9)SIMPLE INTREST 
+   float principle_amount,rate_of_intrest,simple_intrest,time,amount;
+   printf("principle amount:");
+   scanf("%f",&principle_amount);
+   printf("rate of intrest:");
+   scanf("%f",&rate_of_intrest);
+   printf("time:");
+   scanf("%f",&time);
+   simple_intrest=(principle_amount*rate_of_intrest*time)/100;
+   amount=principle_amount+simple_intrest;
+   printf("the total amount:%f\n",amount);
+   printf("the simple intrest:%f\n",simple_intrest);
+//10)PERCENTAGE OF 5 SUBJECTS
+   float percentage,tamil,english,maths,physics,chemistry,average;
+   printf("tamil marks:");
+   scanf("%f",&tamil);
+   printf("english marks:");
+   scanf("%f",&english);
+   printf("maths marks:");
+   scanf("%f",&maths);
+   printf("physics marks:");
+   scanf("%f",&physics);
+   printf("chemistry marks:");
+   scanf("%f",&chemistry);
+   average=(tamil+english+maths+physics+chemistry);
+   printf("total marks:%f\n",average);
+   percentage=(average/500.0)*100;
+   printf("total percentage:%f\n",percentage);
+
 //11) Assignment operator  
     int c=15;
     int d=10;
@@ -46,16 +108,43 @@ int main()
     printf("%d\n",c);
     d/=3;
     printf("%d\n",d);
+    
+//12)LAST TWO DIGITS
+int number,lasttwodigits;
+printf("enter a digit:");
+scanf("%d",&number);
+lasttwodigits=(number%100);
+printf("the last two digits are:%d\n",lasttwodigits);
+
 //13) square and cube value
-    int d=2,e=3,square,cube;
-    square=(2*2);
-    cube=(3*3);
+    int e=2,f=3,square,cube;
+    square=(e*2);
+    cube=(f*3);
     printf("%d\n",square);
-    printf("%d\n",cube);*/
+    printf("%d\n",cube);
+    
+//14)sizeof
+char ch;
+int num;
+float f;
+double d;
+long int l;
+short int s;
+    printf("Size of char      = %zu bytes\n", sizeof(ch));
+    printf("Size of int       = %zu bytes\n", sizeof(num));
+    printf("Size of float     = %zu bytes\n", sizeof(f));
+    printf("Size of double    = %zu bytes\n", sizeof(d));
+    printf("Size of long int  = %zu bytes\n", sizeof(l));
+    printf("Size of short int = %zu bytes\n", sizeof(s));
+
 //15)conditional statement 
-   int number_1, number_2;
+  int number_1, number_2,small;
    printf("enter number_1:");
-   scanf("%d\n",&number_1);
+   scanf("%d",& number_1);
    printf("enter number_2:");
-   scanf("%d\n",&number_2);
-   printf(number_1< number_2?number_1:number_2 );
+   scanf("%d",& number_2);
+   small=(number_1< number_2?number_1:number_2 );
+   printf("the small number is:%d\n",small);
+    return 0;
+}
+  
