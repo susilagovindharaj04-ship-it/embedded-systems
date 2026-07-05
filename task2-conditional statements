@@ -1,0 +1,214 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int main()
+{
+//1)positive or negative
+int num;
+printf("ENTER A NUMBER:");
+scanf("%d",&num);
+if (num>0){
+    printf("the num positive:%d\n",num);
+}
+else{
+    printf("the num is negative:%d\n",num);
+}
+//2)odd or even
+int a;
+printf("ENTER A NUMBER:");
+scanf("%d",&a);
+if(a%2==0){
+    printf("the even number is:%d\n",a);
+}
+  else{
+      printf("the odd number is:%d\n",a);
+  }
+  
+ //3)largest of three number
+   int b,c,e;
+   printf("the three numbers are:");
+   scanf("%d, %d, %d",&b, &c, &e);
+   if(b>c&&b>e){
+       printf("b is largest:%d",b);
+   }
+   else if(c>e&&c>b){
+       printf("c is largest:%d",c);
+   }
+   else{
+       printf("e is largest:%d",e);
+   }
+  
+   
+//4)patterns  printing
+// square
+ for(int i=1;i<=5;i++){
+    for(int j=1;j<=5;j++){
+        printf(" &");
+        
+    }
+    
+    printf("\n");
+ }
+//right triangle
+for (int row=1;row<=6;row++){
+    for(int clm=1;clm<=row;clm++){
+        printf(" $");
+    }
+    printf(" \n");
+}
+//decreasing triangle
+for(int r=10;r>=1;r--){
+    for(int column=1;column<=r;column++){
+        printf("  *");
+    }
+    printf("\n");
+} 
+  
+ int k=1;
+for(int z=1;z<=5;z++){
+    for(int x=1;x<=z;x++){
+        printf(" %d",k);
+        k++;
+    }
+    printf("\n");
+}
+  
+//5)leap year
+int yr;
+printf("enter a year:");
+scanf("%d",&yr);
+if((yr%4==0)||(yr%100!=0&&yr%4==0)){
+    printf("the leap year is:%d\n",yr);
+}
+   else{
+       printf(" it is not a leap yaer%d\n",yr);
+   }
+   
+//7)simple calculator   
+int n_1,n_2,op;
+printf("enter two number:");
+scanf("%d %d",&n_1,&n_2);
+printf("enter operation:");
+scanf("%d",&op);
+switch(op)
+{
+case 1 :
+  printf("the add of two no:%d",n_1+n_2);
+  break;
+case 2:
+   printf("the sub of two no:%d",n_1-n_2);
+  break;
+case 3:
+   printf("the mul of two no:%d",n_1*n_2);
+  break;
+case 4:
+   printf("the div of two no:%d",n_1/n_2);
+  break;
+default:
+    printf("operation invalid");
+    }
+   
+//8) printing months using switch statement
+int mth;
+printf("\nenter the month:");
+scanf("%d",&mth);
+switch(mth)
+{
+case 1:
+printf("New year, new beginnings with january");
+break;
+case 2:
+printf("February fills the dyke, be it black or be it white.");
+break;
+case 3:
+printf("March comes in like a lion and goes out like a lamb.");
+break;
+case 4:
+printf("April showers bring May flowers.");
+break;
+case 5:
+printf("Cast not a clout till May is out");
+break;
+case 6:
+printf("June is the pearl of summer.");
+break;
+case 7:
+printf("July is hot afternoons and cool memories");
+break;
+case 8:
+printf("August ripens what spring has begun");
+break;
+case 9:
+printf("September brings a fresh start");
+break;
+case 10:
+printf("October's bright blue weather.");
+break;
+case 11:
+printf("November reminds us to be thankful");
+break;
+case 12:
+printf("December is a month of celebration and reflection.");
+break;
+default:
+printf("invalid input");
+}
+    
+//9)printing no using while loop
+int car=1;
+while(car<=10){
+    printf("the numbers are:%d\n",car);
+    car++;
+}
+    
+//10)printing even numbers
+int even=0;
+while(even<=50){
+    printf("the even nmbers are:%d\n",even);
+    even=even+2;
+}
+    
+//11) sum of natural numbers.    
+int nat,natural;
+printf("enter a number:");
+scanf("%d",&nat);
+natural=nat*(nat+1)/2;
+printf("the natural number is:%d\n",natural);
+    
+//13)last two digits
+int number,lasttwodigits;
+printf("enter a digit:");
+scanf("%d",&number);
+lasttwodigits=(number%100);
+printf("the last two digits are:%d\n",lasttwodigits);
+
+//14)palindrome
+int n, original, reverse = 0, digit;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    original = n;
+
+    while(n > 0)
+    {
+        digit = n % 10;
+        reverse = reverse * 10 + digit;
+        n = n / 10;
+    }
+
+    if(original == reverse)
+        printf("Palindrome");
+    else
+        printf("Not a Palindrome");
+
+//15)prime number
+    return 0;
+}
