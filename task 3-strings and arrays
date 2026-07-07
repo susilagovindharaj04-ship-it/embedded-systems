@@ -1,0 +1,104 @@
+
+#include <stdio.h>
+
+int main()
+{
+	//1)find the largest element in an array
+	int n,i;
+	 printf("Enter the number of elements: ");
+	    scanf("%d", &n);
+
+	    int arr[n];
+
+	    printf("Enter %d elements:\n", n);
+	    for (i = 0; i < n; i++) {
+	        scanf("%d", &arr[i]);
+	    }
+
+	    int largest = arr[0];
+
+	    for (i = 1; i < n; i++) {
+	        if (arr[i] > largest) {
+	            largest = arr[i];
+	        }
+	    }
+
+	    printf("The largest element is: %d\n", largest);
+
+//length of string
+	char str[100];
+	int i;
+	printf("enter a string:");
+	fgets(str,sizeof(str),stdin);
+	for(i=0;str[i]!='\0';i++);
+	printf("the lrngth of the word:%d\n",i);
+//palindrome
+char str[100];
+    int i, len = 0, palindrome = 1;
+
+    printf("Enter a string: ");
+    scanf("%s", str);
+
+    while (str[len] != '\0') {
+        len++;
+    }
+
+    for (i = 0; i < len / 2; i++) {
+        if (str[i] != str[len - i - 1]) {
+            palindrome = 0;
+            break;
+        }
+    }
+
+    if (palindrome)
+        printf("The string is a palindrome.\n");
+    else
+        printf("The string is not a palindrome.\n");
+        
+//  copy one string to another      
+        
+ char str1[100], str2[100];
+    int i = 0;
+
+    printf("Enter a string: ");
+    scanf("%[^\n]", str1);
+
+    while (str1[i] != '\0') {
+        str2[i] = str1[i];
+        i++;
+    }
+
+    str2[i] = '\0';   
+
+    printf("Original String: %s\n", str1);
+    printf("Copied String  : %s\n", str2);
+
+//  addition two atrices    
+ int a[2][2], b[2][2], c[2][2];
+    int i, j;
+
+    printf("Enter first matrix:\n");
+    for(i = 0; i < 2; i++) {
+        for(j = 0; j < 2; j++) {
+            scanf("%d", &a[i][j]);
+        }
+    }
+
+    printf("Enter second matrix:\n");
+    for(i = 0; i < 2; i++) {
+        for(j = 0; j < 2; j++) {
+            scanf("%d", &b[i][j]);
+        }
+    }
+
+    printf("Sum of matrices:\n");
+    for(i = 0; i < 2; i++) {
+        for(j = 0; j < 2; j++) {
+            c[i][j] = a[i][j] + b[i][j];
+            printf("%d ", c[i][j]);
+        }
+        printf("\n");
+    }
+        
+	return 0;
+}
