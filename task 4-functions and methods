@@ -1,0 +1,77 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include<ctype.h>
+int main()
+{
+//1 length of string
+char str_1[50]="good morning";
+char str_3[50]="good morning";
+char str_2[50]="welcome to c programming";
+printf("%d\n",strlen(str_1));
+printf("%d\n",strlen(str_2));
+
+//2 string copy
+printf("before copy: %s\n",str_1);
+strcpy(str_1,str_2);
+printf("after copying: %s\n",str_1);
+
+//3 string compare
+if( strcmp(str_1,str_3)==0){
+printf("the strings are equal");}
+else{
+printf ("the strings are not equal");}
+
+//4 squrae root
+int a,result;
+printf("enter a number:");
+scanf("%d",&a);
+result=sqrt(a);
+printf("the squre root is :%d\n",result);
+printf("enter a name:");
+fgets(name2,sizeof(name2),stdin);
+printf("your name is:%s\n",name2);
+printf("enter a name:");
+fgets(name3,sizeof(name3),stdin);
+printf("your name is:%s\n",name3);
+
+//5 toupper tolower
+char name1[20],name2[30],name3[30];
+int i;
+printf("enter a name:");
+fgets(name1,sizeof(name1),stdin);
+printf("enter a name:");
+fgets(name2,sizeof(name2),stdin);
+printf("enter a name:");
+fgets(name3,sizeof(name3),stdin);
+for(int i=0;name1[i]!='\0';i++)
+{   name1[i]=toupper(name1[i]);
+   } printf("%s\n",name1);
+for(int i=0;name2[i]!='\0';i++)
+{   name2[i]=toupper(name2[i]);
+   } printf("%s\n",name2);
+for(int i=0;name3[i]!='\0';i++)
+{   name3[i]=toupper(name3[i]);
+   } printf("%s\n",name3);   
+
+//same person 
+if((name1==name2)&&(name1==name3)){
+    printf("the person are same");
+}if((name2==name3)){
+    printf("they are same person");
+}else{
+    printf("they are different person");
+}
+
+//6 used defined largest number
+void large(int a,int b){
+   if(a<b){
+    printf("the largest number is%d\n",b);
+}
+else{
+    printf("the smallest number is%d\n",a);
+}}
+int main(){
+large(27,245);
+return 0;
+}   
